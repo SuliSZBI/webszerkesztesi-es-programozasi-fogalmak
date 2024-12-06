@@ -36,7 +36,9 @@
                 <div class="html-kod">
                     <pre>
 &lt;div <span class="id-jelolo">id</span>="tarto"&gt;
-    &lt;h1&gt;Valami cím&lt;/h1&gt;
+    &lt;h1&gt;Beállított CSS&lt;/h1&gt;
+    &lt;p&gt;border: 8px dashed black;&lt;/p&gt;
+    &lt;p&gt;padding: 2em;&lt;/p&gt;
 &lt;/div&gt;
 				</pre>
                 </div>
@@ -117,11 +119,33 @@
                                 ;
                             </td>
                         </tr>
+                        <tr>
+                            <td>background-clip:</td>
+                            <td>
+                                <select
+                                    id="bgcl"
+                                    onchange="valtozas()"
+                                >
+                                    <option value="border-box">
+                                        border-box
+                                    </option>
+                                    <option value="padding-box">
+                                        padding-box
+                                    </option>
+                                    <option value="content-box">
+                                        content-box
+                                    </option>
+                                </select>
+                                ;
+                            </td>
+                        </tr>
                     </table>
                 </div>
             </div>
             <div id="kimenet">
-                <h1>Valami cím</h1>
+                <h1>Beállított CSS</h1>
+                <p>border: 8px dashed black;</p>
+                <p>padding: 2em;</p>
             </div>
             <h3>background-color</h3>
             <p>Egy html-elem háttérszínét állítja be.</p>
@@ -177,6 +201,7 @@
                 Egy html-elem háttérkép bal felső pontjának a helyzetét állítja
                 be.
             </p>
+            <p>CSAK HÁTTÉRKÉPEK ESETÉN MŰKÖDIK! SZÍN ESETÉN NEM!</p>
             <p class="alahuzott">Lehetőségek:</p>
             <ul>
                 <li>
@@ -191,6 +216,27 @@
                 <li>
                     <span class="pelda">content-box</span> - ha van belső
                     eltartás (padding), akkor annak a bal felső sarka
+                </li>
+            </ul>
+            <h3>background-clip</h3>
+            <p>
+                Egy html-elem azon felületét határozza meg, amelyen a háttér
+                beállítás látható.
+            </p>
+            <p>CSAK HÁTTÉRKÉPEK ESETÉN MŰKÖDIK! SZÍN ESETÉN NEM!</p>
+            <p class="alahuzott">Lehetőségek:</p>
+            <ul>
+                <li>
+                    <span class="pelda">border-box</span> - a tartó elem teljes
+                    felülete (default)
+                </li>
+                <li>
+                    <span class="pelda">padding-box</span> - ha van
+                    határolóvonal (border), akkor azon belüli felület
+                </li>
+                <li>
+                    <span class="pelda">content-box</span> - ha van belső
+                    eltartás (padding), akkor azon belüli felület
                 </li>
             </ul>
         </div>
