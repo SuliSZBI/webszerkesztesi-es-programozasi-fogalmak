@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="shortcut icon"
+            href="../info-bg.png"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="../stilus.css"
+        />
+        <style>
+            a {
+                color: blue;
+                text-decoration: none;
+            }
+
+            #kimenet {
+                border: 8px dashed black;
+                padding: 2em;
+                background-origin: content-box;
+            }
+        </style>
+        <title>Background</title>
+    </head>
+    <body>
+        <div id="kontener">
+            <h1><a href="../index.html">css:background</a></h1>
+            <div id="keretek">
+                <div class="html-kod">
+                    <pre>
+&lt;div <span class="id-jelolo">id</span>="tarto"&gt;
+    &lt;h1&gt;Valami cím&lt;/h1&gt;
+&lt;/div&gt;
+				</pre>
+                </div>
+                <div class="css-kod">
+                    <table>
+                        <tr>
+                            <td>background-color:</td>
+                            <td>
+                                <select
+                                    id="bgc"
+                                    onchange="valtozas()"
+                                >
+                                    <option value="white">white</option>
+                                    <option value="red">red</option>
+                                    <option value="dodgerblue">
+                                        dodgerblue
+                                    </option>
+                                    <option value="rgb(10, 75, 159)">
+                                        rgb(10, 75, 159)
+                                    </option>
+                                    <option value="rgb(10 75 159)">
+                                        rgb(10 75 159)
+                                    </option>
+                                    <option value="rgba(10, 75, 159, 0.5)">
+                                        rgba(10, 75, 159, 0.5)
+                                    </option>
+                                    <option value="#FAC589">#FAC589</option>
+                                </select>
+                                ;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>background-image:</td>
+                            <td>
+                                url("
+                                <input
+                                    onchange="valtozas()"
+                                    type="text"
+                                    id="bgi"
+                                />
+                                ");
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>background-repeat:</td>
+                            <td>
+                                <select
+                                    id="bgr"
+                                    onchange="valtozas()"
+                                >
+                                    <option value="repeat">repeat</option>
+                                    <option value="no-repeat">no-repeat</option>
+                                    <option value="repeat-x">repeat-x</option>
+                                    <option value="repeat-y">repeat-y</option>
+                                    <option value="round">round</option>
+                                    <option value="space">space</option>
+                                </select>
+                                ;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>background-origin:</td>
+                            <td>
+                                <select
+                                    id="bgo"
+                                    onchange="valtozas()"
+                                >
+                                    <option value="border-box">
+                                        border-box
+                                    </option>
+                                    <option value="padding-box">
+                                        padding-box
+                                    </option>
+                                    <option value="content-box">
+                                        content-box
+                                    </option>
+                                </select>
+                                ;
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="kimenet">
+                <h1>Valami cím</h1>
+            </div>
+            <h3>background-color</h3>
+            <p>Egy html-elem háttérszínét állítja be.</p>
+            <p class="alahuzott">Lehetőségek:</p>
+            <ul>
+                <li>
+                    <sapn class="pelda">színnév</sapn> - white, red, dodgerblue
+                    stb.
+                </li>
+                <li>
+                    <span class="pelda">rgb érték</span> - rgb(10, 75, 159) vagy
+                    rgb(10 75 159)
+                </li>
+                <li>
+                    <span class="pelda">rgba érték</span> - rgba(10, 75, 159,
+                    0.5)
+                </li>
+                <li>
+                    <span class="pelda">hexadecimális érték</span> - #FAC589
+                </li>
+            </ul>
+            <h3>background-image</h3>
+            <p>Egy html-elem háttérképének beállít egy képet.</p>
+            <h3>background-repeat</h3>
+            <p>Egy html-elem háttérképének az ismétlődését állítja be.</p>
+            <p class="alahuzott">Lehetőségek:</p>
+            <ul>
+                <li>
+                    <span class="pelda">repeat</span> - van ismétlődés (default)
+                </li>
+                <li><span class="pelda">no-repeat</span> - nincs ismétlődés</li>
+                <li>
+                    <span class="pelda">repeat-x</span> - vízszintes ismétlődés
+                </li>
+                <li>
+                    <span class="pelda">repeat-y</span> - függőleges ismétlődés
+                </li>
+                <li>
+                    <span class="pelda">round</span> - a megengedett tér
+                    méretének növekedésével az ismételt képek megnyúlnak (nem
+                    hagynak hézagokat), amíg nincs hely egy másik hozzáadására.
+                    Mindig teljesen kitölti a keretet.
+                </li>
+                <li>
+                    <span class="pelda">space</span> - a kép annyiszor
+                    megismétlődik kivágás nélkül ahányszor csak tud. Az első és
+                    az utolsó kép az elem két oldalára van rögzítve, és a szóköz
+                    egyenletesen oszlik el a képek között.
+                </li>
+            </ul>
+            <h3>background-origin</h3>
+            <p>
+                Egy html-elem háttérkép bal felső pontjának a helyzetét állítja
+                be.
+            </p>
+            <p class="alahuzott">Lehetőségek:</p>
+            <ul>
+                <li>
+                    <span class="pelda">border-box</span> - a tartó elem bal
+                    felső sarka (default)
+                </li>
+                <li>
+                    <span class="pelda">padding-box</span> - ha van
+                    határolóvonal (border), akkor azon belül annak a bal felső
+                    sarka
+                </li>
+                <li>
+                    <span class="pelda">content-box</span> - ha van belső
+                    eltartás (padding), akkor annak a bal felső sarka
+                </li>
+            </ul>
+        </div>
+        <script src="./background.js"></script>
+    </body>
+</html>
