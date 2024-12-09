@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="shortcut icon"
+            href="./info-bg.png"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="../../css/stilus.css"
+        />
+        <style>
+            a {
+                color: blue;
+                text-decoration: none;
+            }
+
+            #kimenet {
+                border: 8px dashed black;
+                padding: 2em;
+                background-origin: content-box;
+            }
+        </style>
+        <title>c#: Alap C# forráskód</title>
+    </head>
+    <body>
+        <div id="kontener">
+            <h1><a href="./index.html">c#: Alap C# forráskód</a></h1>
+            <div class="keretek">
+                <div class="csharp-kod">
+                    <pre>
+using System;
+
+namespace Pelda
+{
+    internal class Program
+    {
+        static void Main(string[] args) 
+        {
+            Console.WriteLine("Hello World!");
+
+            Console.ReadKey(true);
+        }
+    }
+}
+</pre
+                    >
+                </div>
+                <div class="konzolkep">
+                    <img src="./images/Kep_001.png" />
+                </div>
+            </div>
+            <div class="magyarazat">
+                <h3>using System;</h3>
+                <p>
+                    A program futtatásához szükséges névterek (namespace)
+                    beimportálása.
+                </p>
+                <h3>namespace Pelda</h3>
+                <p>
+                    A projekt készítéseko adott névvel létrehozott névtér, amely
+                    majd tartalmazni fogja az osztályainkat (class),
+                    interfészeinket (interface) stb.
+                </p>
+                <h3>internal class Program</h3>
+                <p>
+                    A program indítópontját tartalamzó osztály. Általában
+                    Program a neve.
+                </p>
+                <h3>static void Main(string[] args)</h3>
+                <p>A program indítópontját reprezentáló metódus.</p>
+                <h3>Console.WriteLine("Hello World!");</h3>
+                <p>Kiíratás a konzolra (standard output).</p>
+                <h3>Console.ReadKey(true);</h3>
+                <p>Konzol bezáródásának a megakadályozása.</p>
+            </div>
+        </div>
+    </body>
+</html>

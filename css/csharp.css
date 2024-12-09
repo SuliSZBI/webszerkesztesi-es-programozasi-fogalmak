@@ -1,0 +1,26 @@
+.csharp-kod {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0.5em;
+    margin-right: 1em;
+    margin-top: 1em;
+}
+
+.konzolkep {
+    background-color: white;
+}
+
+.konzolkep img {
+    height: 100%;
+    width: 100%;
+    object-fit: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .konzolkep img {
+        height: 100%;
+        width: 100%;
+        object-fit: none;
+    }
+}

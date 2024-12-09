@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="shortcut icon"
+            href="../info-bg.png"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="../../css/stilus.css"
+        />
+        <style>
+            a {
+                color: blue;
+                text-decoration: none;
+            }
+
+            #kimenet {
+                border: 8px dashed black;
+                padding: 2em;
+                background-origin: content-box;
+            }
+        </style>
+        <title>Background</title>
+    </head>
+    <body>
+        <div id="kontener">
+            <h1><a href="../index.html">css: background</a></h1>
+            <div class="keretek">
+                <div class="html-kod">
+                    <pre>
+&lt;div <span class="id-jelolo">id</span>="tarto"&gt;
+    &lt;h1&gt;Beállított CSS&lt;/h1&gt;
+    &lt;p&gt;border: 8px dashed black;&lt;/p&gt;
+    &lt;p&gt;padding: 2em;&lt;/p&gt;
+    &lt;p&gt;Lehetséges kép: https://carwow-uk-wp-3.imgix.net/18015-MC20BluInfinito-scaled-e1707920217641.jpg&lt;/p&gt;
+    &lt;p&gt;Lehetséges kép: https://catmuseumbudapest.hu/wp-content/uploads/2024/02/cica-megfazas.jpg&lt;/p&gt;
+    &lt;p&gt;Lehetséges kép: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPUPPObe8bkov6CluwLDx5FNgla0wkgvJxAgPhrGxg_ZcXu36M1nBLZDnHfRyltQNjZVw4VROMhokT0D4mTrQ57g&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+                </div>
+                <div class="css-kod">
+                    <table>
+                        <tr>
+                            <td>background-color:</td>
+                            <td>
+                                <select
+                                    id="bgc"
+                                    onchange="valtozas()"
+                                >
+                                    <option value="white">white</option>
+                                    <option value="red">red</option>
+                                    <option value="dodgerblue">
+                                        dodgerblue
+                                    </option>
+                                    <option value="rgb(10, 75, 159)">
+                                        rgb(10, 75, 159)
+                                    </option>
+                                    <option value="rgb(10 75 159)">
+                                        rgb(10 75 159)
+                                    </option>
+                                    <option value="rgba(10, 75, 159, 0.5)">
+                                        rgba(10, 75, 159, 0.5)
+                                    </option>
+                                    <option value="#FAC589">#FAC589</option>
+                                </select>
+                                ;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>background-image:</td>
+                            <td>
+                                url("
+                                <input
+                                    onchange="valtozas()"
+                                    type="text"
+                                    id="bgi"
+                                />
+                                ");
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>background-size:</td>
+                            <td>
+                                <select
+                                    id="bgs"
+                                    onchange="valtozas()"
+                                >
+                                    <option value="auto">auto</option>
+                                    <option value="contain">contain</option>
+                                    <option value="cover">cover</option>
+                                    <option value="200px">200px</option>
+                                    <option value="10%">10%</option>
+                                    <option value="100% 100%">100% 100%</option>
+                                </select>
+                                ;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>background-repeat:</td>
+                            <td>
+                                <select
+                                    id="bgr"
+                                    onchange="valtozas()"
+                                >
+                                    <option value="repeat">repeat</option>
+                                    <option value="no-repeat">no-repeat</option>
+                                    <option value="repeat-x">repeat-x</option>
+                                    <option value="repeat-y">repeat-y</option>
+                                    <option value="round">round</option>
+                                    <option value="space">space</option>
+                                </select>
+                                ;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>background-position:</td>
+                            <td>
+                                <select
+                                    id="bgp"
+                                    onchange="valtozas()"
+                                >
+                                    <option value="0px">0px</option>
+                                    <option value="20%">20%</option>
+                                    <option value="left">left</option>
+                                    <option value="top">top</option>
+                                    <option value="right">right</option>
+                                    <option value="bottom">bottom</option>
+                                    <option value="center">center</option>
+                                    <option value="0px 0px">0px 0px</option>
+                                    <option value="10% 30%">10% 30%</option>
+                                    <option value="right 80px">
+                                        right 80px
+                                    </option>
+                                    <option value="80px bottom">
+                                        80px bottom
+                                    </option>
+                                    <option value="right 80px bottom">
+                                        right 80px bottom
+                                    </option>
+                                </select>
+                                ;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>background-origin:</td>
+                            <td>
+                                <select
+                                    id="bgo"
+                                    onchange="valtozas()"
+                                >
+                                    <option value="border-box">
+                                        border-box
+                                    </option>
+                                    <option value="padding-box">
+                                        padding-box
+                                    </option>
+                                    <option value="content-box">
+                                        content-box
+                                    </option>
+                                </select>
+                                ;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>background-clip:</td>
+                            <td>
+                                <select
+                                    id="bgcl"
+                                    onchange="valtozas()"
+                                >
+                                    <option value="border-box">
+                                        border-box
+                                    </option>
+                                    <option value="padding-box">
+                                        padding-box
+                                    </option>
+                                    <option value="content-box">
+                                        content-box
+                                    </option>
+                                </select>
+                                ;
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="kimenet">
+                <h1>Beállított CSS</h1>
+                <p>border: 8px dashed black;</p>
+                <p>padding: 2em;</p>
+                <p>
+                    Lehetséges kép:
+                    https://carwow-uk-wp-3.imgix.net/18015-MC20BluInfinito-scaled-e1707920217641.jpg
+                </p>
+                <p>
+                    Lehetséges kép:
+                    https://catmuseumbudapest.hu/wp-content/uploads/2024/02/cica-megfazas.jpg
+                </p>
+                <p>
+                    Lehetséges kép:
+                    https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPUPPObe8bkov6CluwLDx5FNgla0wkgvJxAgPhrGxg_ZcXu36M1nBLZDnHfRyltQNjZVw4VROMhokT0D4mTrQ57g
+                </p>
+            </div>
+            <h3>background-color</h3>
+            <p>Egy html-elem háttérszínét állítja be.</p>
+            <p class="alahuzott">Lehetőségek:</p>
+            <ul>
+                <li>
+                    <sapn class="pelda">színnév</sapn> - white, red, dodgerblue
+                    stb.
+                </li>
+                <li>
+                    <span class="pelda">rgb érték</span> - rgb(10, 75, 159) vagy
+                    rgb(10 75 159)
+                </li>
+                <li>
+                    <span class="pelda">rgba érték</span> - rgba(10, 75, 159,
+                    0.5)
+                </li>
+                <li>
+                    <span class="pelda">hexadecimális érték</span> - #FAC589
+                </li>
+            </ul>
+            <h3>background-image</h3>
+            <p>Egy html-elem háttérképének beállít egy képet.</p>
+            <h3>background-repeat</h3>
+            <p>Egy html-elem háttérképének az ismétlődését állítja be.</p>
+            <p class="alahuzott">Lehetőségek:</p>
+            <ul>
+                <li>
+                    <span class="pelda">repeat</span> - van ismétlődés (default)
+                </li>
+                <li><span class="pelda">no-repeat</span> - nincs ismétlődés</li>
+                <li>
+                    <span class="pelda">repeat-x</span> - vízszintes ismétlődés
+                </li>
+                <li>
+                    <span class="pelda">repeat-y</span> - függőleges ismétlődés
+                </li>
+                <li>
+                    <span class="pelda">round</span> - a megengedett tér
+                    méretének növekedésével az ismételt képek megnyúlnak (nem
+                    hagynak hézagokat), amíg nincs hely egy másik hozzáadására.
+                    Mindig teljesen kitölti a keretet.
+                </li>
+                <li>
+                    <span class="pelda">space</span> - a kép annyiszor
+                    megismétlődik kivágás nélkül ahányszor csak tud. Az első és
+                    az utolsó kép az elem két oldalára van rögzítve, és a szóköz
+                    egyenletesen oszlik el a képek között.
+                </li>
+            </ul>
+            <h3>background-origin</h3>
+            <p>
+                Egy html-elem háttérkép bal felső pontjának a helyzetét állítja
+                be.
+            </p>
+            <p>CSAK HÁTTÉRKÉPEK ESETÉN MŰKÖDIK! SZÍN ESETÉN NEM!</p>
+            <p class="alahuzott">Lehetőségek:</p>
+            <ul>
+                <li>
+                    <span class="pelda">border-box</span> - a tartó elem bal
+                    felső sarka (default)
+                </li>
+                <li>
+                    <span class="pelda">padding-box</span> - ha van
+                    határolóvonal (border), akkor azon belül annak a bal felső
+                    sarka
+                </li>
+                <li>
+                    <span class="pelda">content-box</span> - ha van belső
+                    eltartás (padding), akkor annak a bal felső sarka
+                </li>
+            </ul>
+            <h3>background-clip</h3>
+            <p>
+                Egy html-elem azon felületét határozza meg, amelyen a háttér
+                beállítás látható.
+            </p>
+            <p>CSAK HÁTTÉRKÉPEK ESETÉN MŰKÖDIK! SZÍN ESETÉN NEM!</p>
+            <p class="alahuzott">Lehetőségek:</p>
+            <ul>
+                <li>
+                    <span class="pelda">border-box</span> - a tartó elem teljes
+                    felülete (default)
+                </li>
+                <li>
+                    <span class="pelda">padding-box</span> - ha van
+                    határolóvonal (border), akkor azon belüli felület
+                </li>
+                <li>
+                    <span class="pelda">content-box</span> - ha van belső
+                    eltartás (padding), akkor azon belüli felület
+                </li>
+            </ul>
+        </div>
+        <script src="./background.js"></script>
+    </body>
+</html>

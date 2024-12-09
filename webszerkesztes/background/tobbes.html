@@ -13,7 +13,7 @@
         />
         <link
             rel="stylesheet"
-            href="../stilus.css"
+            href="../../css/stilus.css"
         />
         <style>
             a {
@@ -31,7 +31,7 @@
     </head>
     <body>
         <div id="kontener">
-            <h1><a href="../index.html">css:background</a></h1>
+            <h1><a href="../index.html">css: background (több képpel)</a></h1>
             <div id="keretek">
                 <div class="html-kod">
                     <pre>
@@ -39,8 +39,11 @@
     &lt;h1&gt;Beállított CSS&lt;/h1&gt;
     &lt;p&gt;border: 8px dashed black;&lt;/p&gt;
     &lt;p&gt;padding: 2em;&lt;/p&gt;
+    &lt;p&gt;Lehetséges kép: https://carwow-uk-wp-3.imgix.net/18015-MC20BluInfinito-scaled-e1707920217641.jpg&lt;/p&gt;
+    &lt;p&gt;Lehetséges kép: https://catmuseumbudapest.hu/wp-content/uploads/2024/02/cica-megfazas.jpg&lt;/p&gt;
+    &lt;p&gt;Lehetséges kép: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPUPPObe8bkov6CluwLDx5FNgla0wkgvJxAgPhrGxg_ZcXu36M1nBLZDnHfRyltQNjZVw4VROMhokT0D4mTrQ57g&lt;/p&gt;
 &lt;/div&gt;
-				</pre>
+</pre>
                 </div>
                 <div class="css-kod">
                     <table>
@@ -77,16 +80,63 @@
                                 <input
                                     onchange="valtozas()"
                                     type="text"
-                                    id="bgi"
+                                    id="bgi1"
+                                />
+                                "), url("
+                                <input
+                                    onchange="valtozas()"
+                                    type="text"
+                                    id="bgi2"
                                 />
                                 ");
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>background-size:</td>
+                            <td>
+                                <select
+                                    id="bgs1"
+                                    onchange="valtozas()"
+                                >
+                                    <option value="auto">auto</option>
+                                    <option value="contain">contain</option>
+                                    <option value="cover">cover</option>
+                                    <option value="200px">200px</option>
+                                    <option value="10%">10%</option>
+                                    <option value="100% 100%">100% 100%</option>
+                                </select>
+                                ,
+                                <select
+                                    id="bgs2"
+                                    onchange="valtozas()"
+                                >
+                                    <option value="auto">auto</option>
+                                    <option value="contain">contain</option>
+                                    <option value="cover">cover</option>
+                                    <option value="200px">200px</option>
+                                    <option value="10%">10%</option>
+                                    <option value="100% 100%">100% 100%</option>
+                                </select>
+                                ;
                             </td>
                         </tr>
                         <tr>
                             <td>background-repeat:</td>
                             <td>
                                 <select
-                                    id="bgr"
+                                    id="bgr1"
+                                    onchange="valtozas()"
+                                >
+                                    <option value="repeat">repeat</option>
+                                    <option value="no-repeat">no-repeat</option>
+                                    <option value="repeat-x">repeat-x</option>
+                                    <option value="repeat-y">repeat-y</option>
+                                    <option value="round">round</option>
+                                    <option value="space">space</option>
+                                </select>
+                                ,
+                                <select
+                                    id="bgr2"
                                     onchange="valtozas()"
                                 >
                                     <option value="repeat">repeat</option>
@@ -103,7 +153,22 @@
                             <td>background-origin:</td>
                             <td>
                                 <select
-                                    id="bgo"
+                                    id="bgo1"
+                                    onchange="valtozas()"
+                                >
+                                    <option value="border-box">
+                                        border-box
+                                    </option>
+                                    <option value="padding-box">
+                                        padding-box
+                                    </option>
+                                    <option value="content-box">
+                                        content-box
+                                    </option>
+                                </select>
+                                ,
+                                <select
+                                    id="bgo2"
                                     onchange="valtozas()"
                                 >
                                     <option value="border-box">
@@ -123,7 +188,22 @@
                             <td>background-clip:</td>
                             <td>
                                 <select
-                                    id="bgcl"
+                                    id="bgcl1"
+                                    onchange="valtozas()"
+                                >
+                                    <option value="border-box">
+                                        border-box
+                                    </option>
+                                    <option value="padding-box">
+                                        padding-box
+                                    </option>
+                                    <option value="content-box">
+                                        content-box
+                                    </option>
+                                </select>
+                                ,
+                                <select
+                                    id="bgcl2"
                                     onchange="valtozas()"
                                 >
                                     <option value="border-box">
@@ -146,6 +226,18 @@
                 <h1>Beállított CSS</h1>
                 <p>border: 8px dashed black;</p>
                 <p>padding: 2em;</p>
+                <p>
+                    Lehetséges kép:
+                    https://carwow-uk-wp-3.imgix.net/18015-MC20BluInfinito-scaled-e1707920217641.jpg
+                </p>
+                <p>
+                    Lehetséges kép:
+                    https://catmuseumbudapest.hu/wp-content/uploads/2024/02/cica-megfazas.jpg
+                </p>
+                <p>
+                    Lehetséges kép:
+                    https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPUPPObe8bkov6CluwLDx5FNgla0wkgvJxAgPhrGxg_ZcXu36M1nBLZDnHfRyltQNjZVw4VROMhokT0D4mTrQ57g
+                </p>
             </div>
             <h3>background-color</h3>
             <p>Egy html-elem háttérszínét állítja be.</p>
@@ -240,6 +332,6 @@
                 </li>
             </ul>
         </div>
-        <script src="./background.js"></script>
+        <script src="./tobbes.js"></script>
     </body>
 </html>

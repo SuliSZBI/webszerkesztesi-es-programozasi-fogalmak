@@ -1,0 +1,35 @@
+@import url('./webes.css');
+@import url('./csharp.css');
+
+* {
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    /* background-image: linear-gradient(rgb(255, 224, 224), rgb(230, 230, 255)); */
+    background-color: rgba(187, 187, 187, 0.568);
+}
+
+#main-kontener {
+    width: 80%;
+    margin: 1em auto;
+}
+
+#main-kontener h1 {
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+#main-kontener a {
+    color: blue;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#main-kontener h1 a {
+    color: black;
+}
