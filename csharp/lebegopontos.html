@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="shortcut icon"
+            href="./info-bg.png"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="../../css/stilus.css"
+        />
+        <style>
+            a {
+                color: blue;
+                text-decoration: none;
+            }
+
+            #kimenet {
+                border: 8px dashed black;
+                padding: 2em;
+                background-origin: content-box;
+            }
+        </style>
+        <title>c#: Lebegőpontos számok</title>
+    </head>
+    <body>
+        <div id="kontener">
+            <h1><a href="./index.html">c#: Lebegőpontos számok</a></h1>
+            <div class="keretek">
+                <div class="csharp-kod">
+                    <pre>
+using System;
+
+namespace Pelda
+{
+    internal class Program
+    {
+        static void Main(string[] args) 
+        {
+                float adat_01 = 169.15F;
+		Console.WriteLine($"Single (±1.5 x 10<sup>-45</sup> - ±3.4 x 10<sup>38</sup>) érték: {adat_01}");
+		double adat_02 = -16.48D;
+		Console.WriteLine($"Double (±5.0 × 10<sup>-324</sup>  - ±1.7 × 10<sup>308</sup>) érték: {adat_02}");
+		decimal adat_03 = 15896.8965M;
+		Console.WriteLine($"Decimal (±1.0 x 10<sup>-28</sup>  - ±7.9228 x 10<sup>28</sup>) érték: {adat_03}");
+
+            	Console.ReadKey(true);
+        }
+    }
+}
+</pre
+                    >
+                </div>
+                <div class="konzolkep">
+                    <img src="./images/Kep_002.png" />
+                </div>
+            </div>
+            <div class="magyarazat">
+                <h3>float</h3>
+                <p>
+                    4 byte-on reprezentált lebegőpontos értéktípus (floating type).
+                </p>
+                <p>Értékkészlet: ±1.5 x 10<sup>-45</sup> - ±3.4 x 10<sup>38</sup></p>
+                <p>.NET megfelelője: System.Single</p>
+                <h3>double</h3>
+                <p>
+                    8 byte-on reprezentált lebegőpontos értéktípus (floating type).
+                </p>
+                <p>Értékkészlet: ±5.0 × 10<sup>-324</sup>   - ±1.7 × 10<sup>308</sup></p>
+                <p>.NET megfelelője: System.Double</p>
+                <h3>decimal</h3>
+                <p>
+                    16 byte-on reprezentált lebegőpontos értéktípus (floating type).
+                </p>
+                <p>Értékkészlet: ±1.0 x 10<sup>-28</sup> - ±7.9228 x 10<sup>28</sup></p>
+                <p>.NET megfelelője: System.Decimal</p>
+                
+                
+            </div>
+        </div>
+    </body>
+</html>

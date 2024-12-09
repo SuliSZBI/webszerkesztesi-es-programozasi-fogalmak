@@ -49,16 +49,16 @@ namespace Pelda
 		Console.WriteLine($"SByte ((-128)-127) érték: {adat_02}");
 		ushort adat_03 = 38478;
 		Console.WriteLine($"UInt16 (0-65,535) érték: {adat_03}");
-		short adat_04 = 15896;
+		short adat_04 = -15896;
 		Console.WriteLine($"Int16 ((-32,768)-32,767) érték: {adat_04}");
-		int adat_05 = -384780;
+		uint adat_05 = 384780;
 		Console.WriteLine($"UInt32 (0-4,294,967,295) érték: {adat_05}");
-		uint adat_06 = 1589601;
+		int adat_06 = -1589601;
 		Console.WriteLine($"Int32 ((-2,147,483,648)-2,147,483,647) érték: {adat_06}");
-		long adat_07 = -3847808895;
-		Console.WriteLine($"UInt64 (0-4,294,967,295) érték: {adat_07}");
-		ulong adat_08 = 158960485561;
-		Console.WriteLine($"Int64 ((-2,147,483,648)-2,147,483,647) érték: {adat_08}");
+		ulong adat_07 = 3847808895;
+		Console.WriteLine($"UInt64 (0-18,446,744,073,709,551,615) érték: {adat_07}");
+		long adat_08 = -158960485561;
+		Console.WriteLine($"Int64 ((-9,223,372,036,854,775,808)-9,223,372,036,854,775,807) érték: {adat_08}");
 
             	Console.ReadKey(true);
         }
@@ -72,28 +72,55 @@ namespace Pelda
                 </div>
             </div>
             <div class="magyarazat">
-                <h3>using System;</h3>
+                <h3>byte</h3>
                 <p>
-                    A program futtatásához szükséges névterek (namespace)
-                    beimportálása.
+                    1 byte-on reprezentált egészszám értéktípus (value type).
                 </p>
-                <h3>namespace Pelda</h3>
+                <p>Értékkészlet: 0-255</p>
+                <p>.NET megfelelője: System.Byte</p>
+                <h3>sbyte</h3>
                 <p>
-                    A projekt készítéseko adott névvel létrehozott névtér, amely
-                    majd tartalmazni fogja az osztályainkat (class),
-                    interfészeinket (interface) stb.
+                    1 byte-on reprezentált egészszám értéktípus (value type).
                 </p>
-                <h3>internal class Program</h3>
+                <p>Értékkészlet: (-128)-127</p>
+                <p>.NET megfelelője: System.SByte</p>
+                <h3>ushort</h3>
                 <p>
-                    A program indítópontját tartalamzó osztály. Általában
-                    Program a neve.
+                    2 byte-on reprezentált egészszám értéktípus (value type).
                 </p>
-                <h3>static void Main(string[] args)</h3>
-                <p>A program indítópontját reprezentáló metódus.</p>
-                <h3>Console.WriteLine("Hello World!");</h3>
-                <p>Kiíratás a konzolra (standard output).</p>
-                <h3>Console.ReadKey(true);</h3>
-                <p>Konzol bezáródásának a megakadályozása.</p>
+                <p>Értékkészlet: 0-65,535</p>
+                <p>.NET megfelelője: System.UInt16</p>
+                <h3>short</h3>
+                <p>
+                    2 byte-on reprezentált egészszám értéktípus (value type).
+                </p>
+                <p>Értékkészlet: (-32,768)-32,767</p>
+                <p>.NET megfelelője: System.Int16</p>
+                <h3>uint</h3>
+                <p>
+                    4 byte-on reprezentált egészszám értéktípus (value type).
+                </p>
+                <p>Értékkészlet: 0-4,294,967,295</p>
+                <p>.NET megfelelője: System.UInt32</p>
+                <h3>int</h3>
+                <p>
+                    4 byte-on reprezentált egészszám értéktípus (value type).
+                </p>
+                <p>Értékkészlet: (-2,147,483,648)-2,147,483,647</p>
+                <p>.NET megfelelője: System.Int32</p>
+                <h3>ulong</h3>
+                <p>
+                    8 byte-on reprezentált egészszám értéktípus (value type).
+                </p>
+                <p>Értékkészlet: 0-18,446,744,073,709,551,615</p>
+                <p>.NET megfelelője: System.UInt64</p>
+                <h3>long</h3>
+                <p>
+                    8 byte-on reprezentált egészszám értéktípus (value type).
+                </p>
+                <p>Értékkészlet: (-9,223,372,036,854,775,808)-9,223,372,036,854,775,807</p>
+                <p>.NET megfelelője: System.Int64</p>
+                
             </div>
         </div>
     </body>
